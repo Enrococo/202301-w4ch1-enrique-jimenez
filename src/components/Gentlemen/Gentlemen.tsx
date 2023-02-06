@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import Gentleman from "../../data/data.model";
 import "./Gentlemen.css";
 
@@ -6,16 +6,11 @@ interface GentlemenProps {
   gentleman: Gentleman;
 }
 
+export let counter = 0;
+
 const Card: FC<GentlemenProps> = ({ gentleman }) => {
-  const [select, setSelect] = useState(gentleman.selected);
   return (
-    <li
-      onClick={(event) => {
-        setSelect(select === true ? false : true);
-        console.log(select);
-      }}
-      className="gentleman"
-    >
+    <li className="gentleman">
       <div className="gentleman__avatar-container">
         <img
           className="gentleman__avatar"
