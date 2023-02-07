@@ -6,6 +6,8 @@ interface GentlemenProps {
   gentleman: Gentleman;
 }
 
+export let counter = 0;
+
 const Card: FC<GentlemenProps> = ({ gentleman }) => {
   return (
     <li className="gentleman">
